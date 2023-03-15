@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best Quiz</title>
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/media.css" />
+  </head>
+
+  <body>
+    <h1 id="showname" style="text-transform: uppercase"></h1>
+    <div id="container">
+      <h1 id="a1">1.HTML called us ?</h1>
+      <h2 id="a2">
+        <ol>
+          <li id="1">Hyper text markup language</li>
+          <li id="2">Hyper markup language</li>
+          <li id="3">Hyper text</li>
+          <li id="4">programming language</li>
+        </ol>
+        <center>
+          <h3 id="result">Please Enter Your Answer Number</h3>
+        </center>
+      </h2>
+      <center>
+        <input type="text" id="answer" style="background: transparent" />
+        <br /><br />
+        <button id="submit" onclick="submit()">Submit</button>
+      </center>
+    </div>
+  </body>
+</html>
+<script>
+  document.getElementById("showname").innerHTML =
+    "WELCOME  " + localStorage.getItem("name");
+
+  function submit() {
+    var rightanswer = parseInt(document.getElementById("answer").value);
+    var answer = 1;
+    if (answer == rightanswer) {
+      document.getElementById("result").innerHTML = "Answer Is Write";
+    } else {
+      document.getElementById("result").innerHTML = "Answer Is Wrong";
+    }
+  }
+</script>
